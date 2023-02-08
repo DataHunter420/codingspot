@@ -1,0 +1,21 @@
+<div class="wrapper login">
+    <div class="container">
+        <div class="col-left">
+            <div class="login-text">
+                <h2>SpotCoding</h2>
+                <p>Create your account.<br>For Free!</p> <a routerLink="../signup" class="btn">Sign up</a>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form action="" [formGroup]="loginform" (ngSubmit)="loginWithEmailAndPassword()">
+                    <p> <label>Email address<span>*</span></label> <input type="email" formControlName="Username" placeholder="Email" required> </p>
+                    <p> <label>Password<span>*</span></label> <input type="password" formControlName="Password" placeholder="Password" required> </p>
+                    <p> <button type="submit" value="Sign In">Login</button> </p>
+                    <p> <a href="">Forgot password?</a> </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
