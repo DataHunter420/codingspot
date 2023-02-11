@@ -1,7 +1,15 @@
 .vertical-menu {
-    width: 200px;
-    height: 550px;
-    overflow-y: auto;
+  height: 600px;
+  width: 100%;
+  background-color: #E7E9EB;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-top: 20px;
+  }
+
+  .tutorial-page{
+    width:200px;
+    
   }
   
   .vertical-menu a {

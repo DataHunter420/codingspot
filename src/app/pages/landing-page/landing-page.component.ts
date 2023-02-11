@@ -21,7 +21,7 @@ export class LandingPageComponent {
       buttons:[
         {
           text:'Learn HTML',
-          link:'tutorial-page',
+          link:'tutorial-page/html',
 
         },
         {

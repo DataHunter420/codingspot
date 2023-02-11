@@ -18,7 +18,7 @@
                   <h5 class="course-heading">{{courses.course_heading}}</h5>
                   <p class="course-desc">{{courses.course_desc}}</p>
                    <div *ngFor="let btn of courses.buttons">
-                    <a routerLink="tutorial-page" class="btn btn-primary">{{btn.text}}</a>
+                    <a routerLink={{btn.link}} class="btn btn-primary">{{btn.text}}</a>
                    </div>
              
                 </div>

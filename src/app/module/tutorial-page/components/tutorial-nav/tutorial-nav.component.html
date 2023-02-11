@@ -1,5 +1,5 @@
 
-<div class="tutorial-pag-nav">
+<div [class.header_fixed]="fixed_header"  (scroll)="scrollHandler()" >
     <ul>
         <li><a class="active" href="#home">HTML</a></li>
         <li><a href="#news">CSS</a></li>

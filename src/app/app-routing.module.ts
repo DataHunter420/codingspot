@@ -20,7 +20,7 @@ const routes: Routes = [
   component:SignupPageComponent
  },
  {
-  path:'tutorial-page',
+  path:'tutorial-page/html',
   component:TutorialPageComponent,
   loadChildren:()=> import('../app/module/tutorial-page/tutorial-page-routing.module').then((m)=>m.TutorialPageRoutingModule)
 
