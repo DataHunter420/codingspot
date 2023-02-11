@@ -1,6 +1,5 @@
  <div class="wrapper">
     <div class="nav-wrapper">
-        <app-landing-page-nav> </app-landing-page-nav>
     </div>
     <div class="content-wrapper">
         <div class="starting-content">
@@ -12,16 +11,16 @@
             </form>
        </div>
        <div class="available-course">
-        <div class="row">
+        <div class="row" *ngFor="let courses of available_courses">
             <div class="col-sm-6">
               <div class="card left">
                 <div class="card-body-left">
-                  <h5 class="course-heading">HTML</h5>
-                  <p class="course-desc">It is the language for creating webpages</p>
-                  <a href="#" class="btn btn-primary">Learn HTML</a>
-                  <a href="#" class="btn btn-primary">Video Tutorial</a>
-                  <a href="#" class="btn btn-primary">HTML Exercises</a>
-                  <a href="#" class="btn btn-primary">Get Certified</a>
+                  <h5 class="course-heading">{{courses.course_heading}}</h5>
+                  <p class="course-desc">{{courses.course_desc}}</p>
+                   <div *ngFor="let btn of courses.buttons">
+                    <a routerLink="tutorial-page" class="btn btn-primary">{{btn.text}}</a>
+                   </div>
+             
                 </div>
               </div>
             </div>
@@ -29,105 +28,13 @@
               <div class="card right">
                 <div class="card-body-right">
                   <h5 class="card-title">HTMl template example</h5>
-                  <img src="../../../assets/images/html-example.png" alt="">
+                  <img src='{{courses.example}}' alt="">
                   <a href="#" class="btn btn-primary">Try Example</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card left">
-                <div class="card-body-left">
-                  <h5 class="course-heading">HTML</h5>
-                  <p class="course-desc">It is the language for creating webpages</p>
-                  <a routerLink="/tutorial.page" class="btn btn-primary">Learn HTML</a>
-                  <a href="#" class="btn btn-primary">Video Tutorial</a>
-                  <a href="#" class="btn btn-primary">HTML Exercises</a>
-                  <a href="#" class="btn btn-primary">Get Certified</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card right">
-                <div class="card-body-right">
-                  <h5 class="card-title">HTMl template example</h5>
-                  <img src="../../../assets/images/html-example.png" alt="">
-                  <a href="#" class="btn btn-primary">Try Example</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card left">
-                <div class="card-body-left">
-                  <h5 class="course-heading">HTML</h5>
-                  <p class="course-desc">It is the language for creating webpages</p>
-                  <a href="#" class="btn btn-primary">Learn HTML</a>
-                  <a href="#" class="btn btn-primary">Video Tutorial</a>
-                  <a href="#" class="btn btn-primary">HTML Exercises</a>
-                  <a href="#" class="btn btn-primary">Get Certified</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card right">
-                <div class="card-body-right">
-                  <h5 class="card-title">HTMl template example</h5>
-                  <img src="../../../assets/images/html-example.png" alt="">
-                  <a href="#" class="btn btn-primary">Try Example</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card left">
-                <div class="card-body-left">
-                  <h5 class="course-heading">HTML</h5>
-                  <p class="course-desc">It is the language for creating webpages</p>
-                  <a href="#" class="btn btn-primary">Learn HTML</a>
-                  <a href="#" class="btn btn-primary">Video Tutorial</a>
-                  <a href="#" class="btn btn-primary">HTML Exercises</a>
-                  <a href="#" class="btn btn-primary">Get Certified</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card right">
-                <div class="card-body-right">
-                  <h5 class="card-title">HTMl template example</h5>
-                  <img src="../../../assets/images/html-example.png" alt="">
-                  <a href="#" class="btn btn-primary">Try Example</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card left">
-                <div class="card-body-left">
-                  <h5 class="course-heading">HTML</h5>
-                  <p class="course-desc">It is the language for creating webpages</p>
-                  <a href="#" class="btn btn-primary">Learn HTML</a>
-                  <a href="#" class="btn btn-primary">Video Tutorial</a>
-                  <a href="#" class="btn btn-primary">HTML Exercises</a>
-                  <a href="#" class="btn btn-primary">Get Certified</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card right">
-                <div class="card-body-right">
-                  <h5 class="card-title">HTMl template example</h5>
-                  <img src="../../../assets/images/html-example.png" alt="">
-                  <a href="#" class="btn btn-primary">Try Example</a>
-                </div>
-              </div>
-            </div>
-          </div>
-       </div>
+        </div>
    </div>
  </div>   
  
